@@ -1,0 +1,326 @@
+@charset "utf-8";
+
+html {
+    font-size: 100%;
+}
+body {
+    background-color: #ebd1b3;
+}
+img {
+    max-width: 100%;
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+ul {
+    list-style-type: none;
+}
+
+/* ヘッダーとメイン */
+#header {
+    width: 100%;
+    background-color: #000;
+    color: #999;
+    height: 70px;
+    text-align: center;
+    position: relative;
+}
+#tri {
+    display: none;
+}
+
+#main {
+    margin: 0 auto;
+    display: flex;
+    max-width: 1000px;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* メニュー表示 */
+#nav {
+    width: 20%;
+    position: absolute;
+    top: -70px;
+    left: 0;
+}
+#logo {
+    height: 70px;
+}
+#logo img {
+    width: 100%;
+}
+#menu li {
+    background-color: #ac8438;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 60px;
+    border: 1px solid #fff;
+    transition: background-color 1s;
+}
+#menu li:hover {
+    background-color: #523b11;
+}
+
+/* 本文 */
+#article {
+    display: block;
+    width: 80%;
+    text-align: left;
+    margin-left: 20%;
+}
+#article .section {
+    padding: 10% 4%;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #aaa;
+}
+#article .section h2 {
+    font-size: 2.2rem;
+    font-weight: normal;
+    border-bottom: 1px solid #444;
+    max-width: 40%;
+    margin-bottom: 30px;
+}
+#top {
+    padding: 0;
+}
+.prf-text {
+    display: flex;
+    justify-content: space-between;
+}
+.prf-left {
+    width: 35%;
+    text-align: center;
+    padding-top: 3%;
+}
+.prf-left img {
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
+}
+.prf-right {
+    width: 65%;
+    padding-left: 2%;
+}
+.prf-right .small {
+    text-align: right;
+    font-size: 0.8rem;
+}
+.mgc-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 70px 0;
+}
+.mgc-left {
+    width: 45%;
+    text-align: center;
+    padding-top: 3%;
+}
+.mgc-right {
+    width: 55%;
+    padding-left: 3%;
+}
+.mgc-right h3 {
+    margin-bottom: 0.5rem;
+}
+.mgc-last {
+    width: 90%;
+    margin: 0 auto;
+}
+.mgc-last ul {
+    list-style-type: disc;
+    padding-left: 30px;
+}
+.mgc-last li {
+    padding-top: 0.8rem;
+    margin-left: 5%;
+    margin-top: 0.5rem;
+}
+#lesson ul {
+    width: 60%;
+    margin: 4% auto;
+    padding: 4% 8%;
+    border: 1px solid #fff;
+    line-height: 2rem;
+}
+#contact .con-text {
+    display: flex;
+    justify-content: space-between;
+}
+#contact .con-left {
+    width: 40%;
+    font-size: 0.95rem;
+    padding-left: 3%;
+}
+#contact .con-left dt {
+    line-height: 2rem;
+    text-decoration: underline;
+}
+#contact .con-left dd {
+    margin-bottom: 15px;
+}
+#contact .con-map {
+    width: 60%;
+}
+
+#footer {
+    width: 100%;
+    margin-top: 100px;
+    background-color: #aaa;
+    color: #fff;
+    height: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 2rem;
+    height: 4rem;
+}
+
+/* ディスプレイサイズ対応 */
+@media(max-height:600px){
+    #top {
+        text-align: center;
+    }
+    #top img {
+        height: calc(100vh - 70px);
+    }
+}
+
+/* レスポンシブ対応 */
+@media(max-width:800px){
+    /* headerと#logoを固定、#triを表示 */
+    #header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+    #tri {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 25;
+        width: 70px;
+        height: 70px;
+        border-left: 1px solid #fff;
+    }
+    #tri:hover {
+        cursor: pointer;
+    }
+    #tri div {
+        margin: 15px auto;
+        width: 0;
+        height: 0;
+        border-top: 40px solid #fff;
+        border-bottom: 0;
+        border-left: 16px solid transparent;
+        border-right: 16px solid transparent;
+    }
+    /* mainのflexとrelativeを解除 */
+    #main {
+        display: block;
+        position: static;
+    }
+    #logo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 25;
+    }
+    #menu {
+        display: none;
+        position: fixed;
+        top: 70px;
+        right: 0;
+        width: 50%;
+    }
+    #menu li {
+        height: 70px;
+        line-height: 70px;
+    }
+    #article {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 70px;
+        text-align: left;
+    }
+    #article .section {
+        padding: 20% 2% 10%;
+        margin-bottom: 20px;
+    }
+    #article .section h2 {
+        max-width: 70%;
+    }
+    #top img {
+        width: 100%;
+    }
+    /* 各コンテンツを縦にする */
+    .prf-text, .mgc-text {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .prf-left {
+        width: 90%;
+        text-align: center;
+        padding-top: 3%;
+    }
+    .prf-right {
+        width: 90%;
+        margin-top: 1.2rem;
+        padding-left: 2%;
+    }
+    .mgc-left {
+        width: 90%;
+        text-align: center;
+        padding-top: 3%;
+    }
+    .mgc-right {
+        width: 90%;
+        padding-left: 3%;
+    }
+    .mgc-right h3 {
+        margin-top: 0.6rem;
+    }
+    .mgc-last ul {
+        list-style-type: disc;
+        padding-left: 3%;
+    }
+    #lesson ul {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+    #lesson p {
+        width: 90%;
+        margin: 0 auto;
+    }
+    #contact .con-text {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+    #contact {
+        padding: 1% 4%;
+    }
+    #contact .con-left {
+        width: 90%;
+        margin-top: 20px;
+    }
+    #contact .con-map {
+        width: 95%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    #contact .con-map iframe {
+        width: 100%;
+    }
+    #contact {
+        padding: 0 4%;
+    }
+}
+
+
