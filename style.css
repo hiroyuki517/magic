@@ -4,7 +4,7 @@ html {
     font-size: 100%;
 }
 body {
-    background-color: #ebd1b3;
+    background-color: #F1EFDC;
 }
 img {
     max-width: 100%;
@@ -53,30 +53,32 @@ ul {
     width: 100%;
 }
 #menu li {
-    background-color: #ac8438;
+    background-color: #d87f26;
     height: 60px;
     color: #fff;
     text-align: center;
     font-size: 1.2rem;
     line-height: 60px;
-    border: 1px solid #fff;
-    transition: background-color 1s;
+    border: 1px solid #000;
+    opacity: 0.85;
+    transition: background-color 1s, opacity, 1s;
 }
 #menu li:hover {
-    background-color: #523b11;
+    background-color: #8e4801;
+    opacity: 1;
 }
 
 /* 本文 */
 #article {
     display: block;
-    width: 80%;
+    width: 78%;
     text-align: left;
-    margin-left: 20%;
+    margin-left: 22%;
 }
 #article .section {
     padding: 10% 4%;
     margin-bottom: 20px;
-    border-bottom: 2px solid #aaa;
+    border: 8px groove #bbb;
 }
 #article .section h2 {
     font-size: 2.2rem;
@@ -145,8 +147,10 @@ ul {
     width: 60%;
     margin: 4% auto;
     padding: 4% 8%;
-    border: 1px solid #fff;
+    border: 1px solid #d87f26;
+    border-radius: 20px;
     line-height: 2rem;
+    background-color: #efdebc;
 }
 #contact .con-text {
     display: flex;
@@ -254,7 +258,7 @@ ul {
         margin-bottom: 20px;
     }
     #article .section h2 {
-        max-width: 70%;
+        max-width: 90%;
     }
     #top img {
         width: 100%;
@@ -322,5 +326,3 @@ ul {
         padding: 0 4%;
     }
 }
-
-
